@@ -11,16 +11,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-#include<SatelliteParameters.h>
+#include "SatelliteParameters.h"
 
-typedef enum Error{
-	Null=0,
-	ErrorFAIL,
-	SuccessPASS
-}ErrorObject_t;
 
 typedef unsigned char     uint8;
 
-ErrorObject_t B_dotAlgorithm(double *TimeSinceSimulaion,double *TimeStep,double *MagneticFieldInBodyCoordinates,SatelliteParametersObject_t *SatelliteParametersObject,double *DipoleMoment);
+ErrorObject_t B_dotAlgorithm(double TimeStep,double *MagneticFieldInBodyCoordinates,double CutOffFrequency,double *DipoleMoment);
 
 #endif /* B_DOT_H_ */
